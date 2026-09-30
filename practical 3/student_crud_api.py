@@ -42,6 +42,7 @@ def add_student():
 def update_student(student_id):
     data = request.get_json()
     for student in students:
+        # pip install flask
         if student["id"] == student_id:
             student["name"] = data["name"]
             student["course"] = data["course"]
