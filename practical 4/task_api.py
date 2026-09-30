@@ -42,6 +42,8 @@ def get_tasks():
 
 # GET - Retrieve a specific task by ID
 @app.get("/tasks/{task_id}")
+# pip install fastapi uvicorn pydantic
+# uvicorn task_api:app --reload
 def get_task(task_id: int):
     for task in tasks:
         if task["id"] == task_id:
